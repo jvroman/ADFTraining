@@ -65,7 +65,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"SourceName": {
-								"value": "@{pipeline().parameters.Name}_@{formatDateTime(utcnow())}_@{pipeline().parameters.Name}@{pipeline().parameters.Source_name}.csv",
+								"value": "@{pipeline().parameters.Name}_@{formatDateTime(utcnow())}_@{pipeline().parameters.Source_name}.csv",
 								"type": "Expression"
 							}
 						}
