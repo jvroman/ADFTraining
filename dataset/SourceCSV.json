@@ -15,10 +15,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": {
-					"value": "concat(@pipeline().parameters.Name,'ADFTrainingcsv.csv')",
-					"type": "Expression"
-				},
+				"fileName": "JulienADFTrainingcsv.csv",
 				"container": "training"
 			},
 			"columnDelimiter": ",",
