@@ -65,7 +65,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"FileName": {
-								"value": "@concat(pipeline().parameters.Name,utcnow(),pipeline().parameters.FileName)",
+								"value": "@concat(pipeline().parameters.Name,utcnow(),concat(pipeline().parameters.Name,'ADFTraining'))",
 								"type": "Expression"
 							}
 						}
