@@ -16,7 +16,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
-					"value": "concat(pipeline().parameters.Name,'ADFTrainingcsv.csv')",
+					"value": "concat(@pipeline().parameters.Name,'ADFTrainingcsv.csv')",
 					"type": "Expression"
 				},
 				"container": "training"
