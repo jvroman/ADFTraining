@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"FileName": {
+			"SourceName": {
 				"type": "string"
 			}
 		},
@@ -15,7 +15,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "JulienADFTrainingcsv.csv",
+				"fileName": {
+					"value": "@dataset().SourceName",
+					"type": "Expression"
+				},
 				"container": "training"
 			},
 			"columnDelimiter": ",",

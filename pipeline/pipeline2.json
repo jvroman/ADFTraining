@@ -52,8 +52,8 @@
 						"referenceName": "SourceCSV",
 						"type": "DatasetReference",
 						"parameters": {
-							"FileName": {
-								"value": "concat(pipeline().parameters.Name,'ADFTrainingcsv.csv')",
+							"SourceName": {
+								"value": "@pipeline().parameters.Source_name",
 								"type": "Expression"
 							}
 						}
@@ -64,8 +64,8 @@
 						"referenceName": "SourceCSV",
 						"type": "DatasetReference",
 						"parameters": {
-							"FileName": {
-								"value": "@concat(pipeline().parameters.Name,formatDateTime(utcnow()),concat(pipeline().parameters.Name,'ADFTrainingcsv.csv'))",
+							"SourceName": {
+								"value": "@{pipeline().parameters.Name}_@{formatDateTime(utcnow())}_@{pipeline().parameters.Name}@{pipeline().parameters.Source_name}.csv",
 								"type": "Expression"
 							}
 						}
@@ -74,7 +74,13 @@
 			}
 		],
 		"parameters": {
+			"Source_name": {
+				"type": "string"
+			},
 			"Name": {
+				"type": "string"
+			},
+			"Destination_name": {
 				"type": "string"
 			}
 		},
