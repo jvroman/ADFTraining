@@ -52,7 +52,10 @@
 						"referenceName": "SourceCSV",
 						"type": "DatasetReference",
 						"parameters": {
-							"FileName": "JulienADFTraining"
+							"FileName": {
+								"value": "@pipeline().parameters.FileName",
+								"type": "Expression"
+							}
 						}
 					}
 				],
@@ -62,7 +65,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"FileName": {
-								"value": "@concat(pipeline().parameters.Name,pipeline().parameters.Date,pipeline().parameters.FileName)",
+								"value": "@concat(pipeline().parameters.Name,utcnow(),pipeline().parameters.FileName)",
 								"type": "Expression"
 							}
 						}
@@ -72,9 +75,6 @@
 		],
 		"parameters": {
 			"Name": {
-				"type": "string"
-			},
-			"Date": {
 				"type": "string"
 			},
 			"FileName": {
