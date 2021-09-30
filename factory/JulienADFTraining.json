@@ -1,0 +1,9 @@
+{
+	"name": "JulienADFTraining",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2b238a5d-331f-4209-9472-b9d45e9c567f",
+		"tenantId": "6e5433e0-76fc-44b7-b71b-0e5446a3fa94"
+	}
+}
